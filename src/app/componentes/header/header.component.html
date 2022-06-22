@@ -1,0 +1,33 @@
+<nav class="navbar banner navbar-expand-lg navbar-dark bg-light">
+    <div class="container-fluid">
+      <a href="#">
+          <img src="../assets/img/logo1.png" alt="" class="logos">
+      </a>
+       
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+              <a class="nav-link" [routerLink]="['home']" *ngIf="auth.user$ | async as user">Home</a> 
+          </li>
+          <li class="nav-item">
+              <a class="nav-link"[routerLink]="['personajes']" *ngIf="auth.user$ | async as user">Personajes</a>
+          </li>
+          <li class="nav-item">
+              <a class="nav-link"[routerLink]="['planeta']" *ngIf="auth.user$ | async as user">Planetas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"[routerLink]="['crear-personaje']" *ngIf="auth.user$ | async as user">Crear Personaje</a>
+        </li>
+        </ul>
+        <form class="d-flex ml-auto" role="search">
+          <ng-container *ngIf="auth.isAuthenticated$ | async; else loggedOut" class="align-self-end">
+              <button class="btn btn-danger" (click)="logout()">Salir</button>
+          </ng-container>
+          <ng-template #loggedOut class="align-self-end">
+              <button class="btn btn-success" type="submit"(click)="auth.loginWithRedirect()">Ingresar</button>
+          </ng-template>
+          
+          </form>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,13 @@
+<h2 class="welcome">Conoce los Planetas de la serie.</h2>
+<div class="card-group">
+    <div *ngFor="let data of planetas;">
+            <div class="card text-center cardp" style="width: 18rem;">
+                    <img class="card-img-top img-fluid img" [src]="data.url_image">
+                    <div class="card-body">
+                            <h5 class="card-title">{{data.name}}</h5>
+                            <p class="card-text">{{data.description}}</p>
+                        
+                        </div>
+                  </div>
+    </div>
+</div>

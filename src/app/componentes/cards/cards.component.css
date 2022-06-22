@@ -1,0 +1,16 @@
+.img {
+    background-size: cover;
+    width: 200px;
+    height: 330px;
+  }
+
+.card-text {
+    height: 100px;
+    overflow-y: scroll;
+  }
+
+  .cardp{
+    text-align: center;
+    border-color: transparent
+  }
+  

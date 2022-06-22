@@ -1,0 +1,21 @@
+.img {
+    background-size: cover;
+    width: 300px;
+    height: 300px;
+  }
+
+.card-text {
+    height: 100px;
+    overflow-y: scroll;
+  }
+
+  .cardp{
+    text-align: center;
+    padding-top: 10px;
+    border-color: transparent
+  }
+
+  .welcome {
+    margin: 10px;
+    text-align: center;
+  }
